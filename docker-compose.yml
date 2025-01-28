@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+
+  postgres:
+    image: postgres:latest
+    container_name: 'postgres_aqa.hw_7'
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql/data/pgdata
+    environment:
+      - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - PGDATA=/var/lib/postgresql/data/pgdata
